@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.layers{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+.layers__front{
+    transform: translate3d(0, calc( var(--scrollTop) / 2), 0);
+}
+.layers__middle{
+    transform: translate3d(0, calc( var(--scrollTop) / 3), 0);
+}
+.layers__back{
+    transform: translate3d(0, calc( var(--scrollTop) / 6), 0);
+}
