@@ -5,3 +5,16 @@
 html, body{
     font-family: 'Chronicle Display', sans-serif;
 }
+.bg_circle-shadow{
+    -webkit-box-shadow: 0px 24px 120px 50px rgba(26, 26, 26, 0.9) inset;
+-moz-box-shadow: 0px 24px 120px 50px rgba(26, 26, 26, 0.9) inset;
+box-shadow: 0px 24px 120px 50px rgba(26, 26, 26, 0.9) inset;
+}
+.bg_box-shadow{
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+.bg_box-shadow-up{
+    -webkit-box-shadow: 0px -320px 67px 43px rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0px -320px 67px 43px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px -320px 67px 43px rgba(0, 0, 0, 0.9);
+}
