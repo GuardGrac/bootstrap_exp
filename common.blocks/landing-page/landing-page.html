@@ -6,51 +6,46 @@
     <link rel="stylesheet" href="landing-page.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/common.blocks/landing-page/landing-page.js"></script>
-    <link rel="stylesheet" type="text/css" href="/common.blocks/pagepilling/jquery.pagepiling.css"/>
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/chronicle-display" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/common.blocks/pagepilling/jquery.pagepiling.js"></script>
     <title>Document</title>
 </head>
-<body class="main-header mx-auto bg-transparent">
-    <header class="container min-w-fit max-w-full bg-transparent z-50 top-0 left-0 fixed">
-        <div class="flex flex-row justify-between justify-items-center text-nowrap pt-2">
-            <div class="basis-1/6 pl-20">
-                <span class="font-black text-4xl">MNTM</span>
-            </div>
-            <div class="flex flex-row justify-center basis-3/5 ">              
-                    <a class="mx-3" href="">Equipment</a>              
-                    <a class="mx-3" href="">About us</a>                           
-                    <a class="mx-3" href="">Blog</a>  
-            </div>
-            <div class="basis-1/6 pr-30">
-                <span>Account</span>   
-            </div>
-        </div>
-            <div class="layer layers__back" style="background-image: url(/images/Layer-back.png);"></div>
-            <div class="layer layers__middle" style="background-image: url(/images/Layer-middle.png);"></div>
-            <div class="layer layers__front" style="background-image: url(/images/Layer-front.png);"></div>
-    </header>
-    <div id="pagepiling">
-        <div class="section">
-                <section class="container bg-transparent min-w-fit flex max-w-full">
-                    <div class="flex flex-row rotate-90 fixed space-x-2 ">
+<body class="mx-auto bg-black">
+                <header class="container min-w-fit max-w-full bg-transparent text-white z-40 top-0 left-0 fixed">
+                    <div class="flex flex-row justify-between justify-items-center text-nowrap pt-2">
+                        <div class="basis-1/6 pl-28">
+                            <span class="font-black text-4xl">MNTM</span>
+                        </div>
+                        <div class="flex flex-row justify-center basis-3/5 ">              
+                                <a class="mx-3" href="">Equipment</a>              
+                                <a class="mx-3" href="">About us</a>                           
+                                <a class="mx-3" href="">Blog</a>  
+                        </div>
+                        <div class="basis-1/6">
+                            <span>Account</span>   
+                        </div>
+                    </div>
+                </header>
+                <section class="container bg-transparent min-w-fit flex max-w-full text-white h-[200vh] pt-[20rem]">
+                    <img class="layer layers__back bg-[url(/images/Layer-back.png)] w-[100%] h-[100%] inset-0 z-[-1] absolute" >
+                    <img class="layer layers__middle bg-[url(/images/Layer-middle.png)] w-[100%] h-[100%] inset-0 z-[-1] mt-[26rem] absolute" >
+                    <img class="layer layers__front bg-[url(/images/Layer-front.png)] w-[100%] h-[100%] inset-0 z-[-1] absolute mt-[40rem]" >
+                    <div class="flex flex-row rotate-90 fixed space-x-2">
                         <div class="ml-20">
                             <span>Follow us</span>
                         </div> 
                         <a href="">
-                            <svg class="invert -rotate-90 flex" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="-rotate-90 flex" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.8 2.00002H16.2C19.4032 2.00002 22 4.59677 22 7.80002V16.2C22 19.4033 19.4032 22 16.2 22H7.8C4.59675 22 2 19.4033 2 16.2V7.80002C2 4.59677 4.59675 2.00002 7.8 2.00002ZM7.6 4C5.61177 4 4 5.61178 4 7.6V16.4C4 18.3882 5.61177 20 7.6 20H16.4C18.3882 20 20 18.3882 20 16.4V7.6C20 5.61178 18.3882 4 16.4 4H7.6ZM17.25 5.5C17.9404 5.5 18.5 6.05965 18.5 6.75C18.5 7.44036 17.9404 8 17.25 8C16.5596 8 16 7.44036 16 6.75C16 6.05965 16.5596 5.5 17.25 5.5ZM12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23857 17 7 14.7614 7 12C7 9.23858 9.23857 7 12 7ZM12 9C10.3431 9 9 10.3432 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3432 13.6569 9 12 9Z" fill="white"/>
                             </svg>
                         </a>
                         <a href="">
-                            <svg class="invert -rotate-90 flex" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="-rotate-90 flex" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M22.4592 6.01238C21.6896 6.35373 20.8624 6.58442 19.9944 6.68815C20.8803 6.15701 21.5609 5.31598 21.8813 4.31378C21.052 4.80564 20.1336 5.16278 19.156 5.3552C18.3732 4.52112 17.2579 4 16.0235 4C13.6534 4 11.7317 5.92147 11.7317 8.29155C11.7317 8.6279 11.7697 8.95546 11.8429 9.2696C8.27609 9.0906 5.11375 7.38203 2.99709 4.78551C2.62765 5.41935 2.41601 6.15656 2.41601 6.94309C2.41601 8.43204 3.17364 9.74563 4.32523 10.5153C3.62179 10.4929 2.95996 10.2999 2.38139 9.97846C2.38098 9.99639 2.38098 10.0143 2.38098 10.0324C2.38098 12.1118 3.86033 13.8463 5.82359 14.2406C5.46349 14.3387 5.08434 14.3912 4.69294 14.3912C4.4164 14.3912 4.14755 14.3642 3.88546 14.3142C4.43161 16.0191 6.01653 17.26 7.89454 17.2945C6.42576 18.4457 4.57527 19.1318 2.56453 19.1318C2.21812 19.1318 1.87651 19.1114 1.54077 19.0717C3.44003 20.2894 5.69591 21 8.1195 21C16.0134 21 20.3302 14.4605 20.3302 8.78918C20.3302 8.60314 20.326 8.41805 20.3177 8.23395C21.1563 7.62886 21.8839 6.87302 22.4592 6.01238Z" fill="white"/>
                             </svg>
                         </a>
                     </div>
-                    
                     <div class="flex flex-col mx-auto w-fit">
                         <div class="flex flex-row items-center">
                             <div class="rounded-2xl border-[1.5px] w-12 h-0 border-yellow-300">
@@ -65,18 +60,13 @@
                         </h1> 
                         <button class="flex items-center">
                             scroll down
-                            <svg class="invert m-2" width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="m-2" width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
                                 </svg>
-                        </button>
-                        
+                        </button>                  
                     </div>
-
                 </section>
-        </div>
-
-        <div class="section">
-            <section class="container bg-transparent flex mx-auto justify-center items-center">
+            <section class="container bg-transparent flex mx-auto justify-center items-center h-screen">
                 <div class="flex flex-row mx-auto justify-between items-center basis-9/12">
                     <div class="flex flex-col relative mx-0 w-fit basis-[42%] p-5">
                         <span class="text-[240px] absolute text-white font-bold opacity-20 -left-32 -top-40" style="user-select: none; z-index: -10!important;">
@@ -85,7 +75,7 @@
                         <div class="flex flex-row items-center">
                             <div class="rounded-2xl border-[1.5px] w-12 h-0 border-yellow-300">
                             </div>
-                            <h1 class="text-center tracking-[0.3rem] font-bold text-yellow-300 p-2">
+                            <h1 class="text-center tracking-[0.3rem] font-bold text-yellow-300 p-2 uppercase">
                                     GET STARTED
                             </h1> 
                         </div>
@@ -107,9 +97,7 @@
                     </div>
                 </div>
             </section>
-       </div>
-       <div class="section">
-            <section class="container bg-transparent flex mx-auto z-1 justify-center items-center">
+            <section class="container bg-transparent flex mx-auto z-1 justify-center items-center h-screen">
                 <div class="flex flex-row mx-auto justify-between items-center basis-10/12">
                     <div class="flex flex-col relative order-last mx-0 w-fit basis-[42%] p-5">
                         <span class="text-[240px] absolute text-white font-bold opacity-20 -left-32 -top-40" style="user-select: none; z-index: -10!important;">
@@ -118,7 +106,7 @@
                         <div class="flex flex-row items-center">
                             <div class="rounded-2xl border-[1.5px] w-12 h-0 border-yellow-300">
                                 </div>
-                                <h1 class="text-center tracking-[0.3rem] font-bold text-yellow-300 p-2">
+                                <h1 class="text-center tracking-[0.3rem] font-bold text-yellow-300 p-2 uppercase">
                                     HIKING ESSENTIALS
                                 </h1> 
                             </div>
@@ -138,52 +126,86 @@
                             <img class="h-full w-full" src="/images/02.png" alt="">
                         </div>
                     </div>
-                </section> 
-       </div>
+                </section>
+        <section class="container bg-transparent flex mx-auto z-1 justify-center items-center h-screen">
+            <div class="flex flex-row mx-auto justify-between items-center basis-10/12">
+                <div class="flex flex-col relative mx-0 w-fit basis-[42%] p-5">
+                    <span class="text-[240px] absolute text-white font-bold opacity-20 -left-36 -top-36" style="user-select: none; z-index: -10!important;">
+                        03
+                    </span> 
+                    <div class="flex flex-row items-center">
+                        <div class="rounded-2xl border-[1.5px] w-12 h-0 border-yellow-300">
+                            </div>
+                            <h1 class="text-center tracking-[0.3rem] font-bold text-yellow-300 p-2 uppercase">
+                                where you go is the key
+                            </h1> 
+                        </div>
+                        <h1 class="font-bold text-6xl py-4 text-white">
+                            Understand Your Map & Timing
+                        </h1>
+                        <span class="text-balance text-white">
+                            To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction.
+                        </span> 
+                        <button class="flex items-center text-xs text-yellow-300">
+                            read more
+                            <svg class="m-2 -rotate-90" width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="fill-yellow-300" d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <img class="h-full w-full" src="/images/03.png" alt="">
+                    </div>
+                </div>
+            </section> 
+            <footer class="container text-white flex flex-row min-w-fit max-w-full bg-transparent pt-72">
+                <div class="flex flex-col justify-between justify-items-center text-nowrap mx-auto pr-20">
+                    <div class="mt-2">
+                        <span class="text-3xl">MNTM</span>
+                    </div>
+                    <div class="mb-10 font-medium">
+                        <span>Get out there & discover your next <br>
+                             slope, mountain & destination!</span>   
+                    </div>
+                    <div class="mt-16 text-slate-400">
+                        <span>Copyright 2019 MNTN, Inc. Terms & Privacy</span>   
+                    </div>
+                </div>
+                <div class="flex flex-col justify-items-center text-nowrap mx-auto mr-10">
+                    <div class="">
+                        <span class="text-2xl text-yellow-300">More on The Blog</span>
+                    </div>
+                    <div class="mt-5 mb-2">
+                        About MNTN
+                    </div>
+                    <div class="my-2">
+                        Contributors & Writers
+                    </div>
+                    <div class="my-2">
+                        Write For Us
+                    </div>
+                    <div class="my-2">
+                        Contact Us
+                    </div>
+                    <div class="my-2">
+                        Privacy Policy
+                    </div>
+                </div>
+                <div class="flex flex-col justify-items-center text-nowrap mx-auto">
+                    <div class="">
+                        <span class="text-2xl text-yellow-300">More on MNTN</span>
+                    </div>
+                    <div class="mt-5 mb-2">
+                        The Team
+                    </div>
+                    <div class="my-2">
+                        Jobs
+                    </div>
+                    <div class="my-2">
+                        Press
+                    </div>
+                </div>
+            </footer>
     </div>
- 
-    <script>
-        $(document).ready(function() {
-
-      /*
-      * Plugin intialization
-      */
-      $('#pagepiling').pagepiling({
-        menu: '#menu',
-        anchors: ['page1', 'page2', 'page3', 'page4'],
-        sectionsColor: ['white', 'black', 'black', 'white'],
-        navigation: {
-          'position': 'right',
-          'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4']
-        },
-        afterRender: function(){
-          $('#pp-nav').addClass('custom');
-        },
-        afterLoad: function(anchorLink, index){
-          if(index>1){
-            $('#pp-nav').removeClass('custom');
-          }else{
-            $('#pp-nav').addClass('custom');
-          }
-        }
-      });
-
-
-      /*
-      * Internal use of the demo website
-      */
-      $('#showExamples').click(function(e){
-        e.stopPropagation();
-        e.preventDefault();
-        $('#examplesList').toggle();
-      });
-
-      $('html').click(function(){
-        $('#examplesList').hide();
-      });
-    });
-    </script>
-    
-
 </body>
 </html>
