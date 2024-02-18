@@ -6,17 +6,16 @@
     <link rel="stylesheet" href="landing-page.css">
     <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/chronicle-display" rel="stylesheet">
-    <link rel="stylesheet" href="/common.blocks/locomotive-scroll/locomotive-scroll.min.css">
     <title>Document</title>
 </head>
-<body class="mx-auto bg-black bg_circle-shadow"> 
+<body class="mx-auto bg-black bg_circle-shadow overflow-x-hidden"> 
                         <header class="container min-w-fit max-w-full bg-transparent main-header text-white z-40 top-0 left-0 pt-2 fixed">
                             <div class="flex flex-row justify-between text-center items-center text-nowrap xl:pt-2 px-4">
                                 <div class="basis-1/6 xl:pl-28">
                                     <span class="font-black text-4xl">MNTM</span>
                                 </div>
                                 <div class="xl:flex hidden flex-row justify-center basis-3/5 ">              
-                                        <a class="mx-3" href="">Equipment</a>              
+                                        <a class="mx-3" href="/common.blocks/exp.html">Equipment</a>              
                                         <a class="mx-3" href="">About us</a>                           
                                         <a class="mx-3" href="">Blog</a>  
                                 </div>
@@ -32,7 +31,7 @@
                         <section class="container bg-transparent relative xl:min-w-fit flex xl:max-w-full text-white h-[100vh] xl:pt-[20rem] pt-[10rem] sec-bg"> 
                             <img class="layer layers__back inset-0 z-[-1] object-cover object-top select-none" src="/images/Layer-back.png" id="back" alt="">
                             <img class="layer layers__middle inset-0 z-[-1] top-0 xl:mt-[28rem] mt-[10rem] object-cover object-top select-none" id="middle" src="/images/Layer-middle.png" alt="">
-                            <img class="layer layers__front inset-0 z-[-1] xl:mt-[44rem] mt-[14rem] object-cover object-top select-none origin-left" id="front" src="/images/Layer-front.png" alt="">   
+                            <img class="layer layers__front inset-0 z-[-1] xl:mt-[44rem] mt-[14rem] object-cover object-top select-none origin-bottom-left" id="front" src="/images/Layer-front.png" alt="">   
                                     <div class="xl:flex hidden flex-row rotate-90 fixed z-[50] space-x-2">
                                         <div class="ml-20">
                                             <span>Follow us</span>
@@ -68,7 +67,7 @@
                                 </button>                  
                             </div>
                         </section>        
-                    <section class="container bg-black flex mx-0 justify-center items-center max-w-full xl:mt-[40rem] my-28 xl:my-0 xl:h-screen h-max relative hello">
+                    <section class="container imgAnimation2 bg-black flex mx-0 justify-center items-center max-w-full xl:mt-[50rem] my-28 xl:my-0 xl:h-screen h-max relative hello">
                         <div class="flex xl:flex-row flex-col mx-auto justify-between items-center xl:basis-9/12 basis-11/12">
                             <div class="flex relative flex-col mx-0 w-fit basis-[42%] xl:p-5">
                                 <span class="xl:text-[240px] text-9xl absolute text-white font-bold opacity-20 xl:-left-32 xl:-top-40 -left-12 -top-11" style="user-select: none; z-index: 1!important;">
@@ -125,7 +124,7 @@
                             </button>
                         </div>
                         <div>
-                            <img class="h-full w-full imgAnimation2" src="/images/02.png" alt="">
+                            <img class="h-full w-full" src="/images/02.png" alt="">
                         </div>
                     </div>
                 </section>
@@ -231,20 +230,18 @@
         <script src="/common.blocks/burger/burger.js"></script>
         <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
         <script>
-            tl2 = gsap.timeline().addLabel("myAnimation2");
-            const tl = gsap.timeline().addLabel("myAnimation");
-            tl.to(".imgAnimation",{y:500}).pause(2).to(".imgAnimation",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                y:-550,}).addLabel("myLabel");
             
-    
-            tl2.to(".imgAnimation2",{y:1200}).pause(2).to(".imgAnimation2",{
+            const tl = gsap.timeline({
                 scrollTrigger : {
+                    trigger: ".imgAnimation",
+                    markers: true,
+                    start:"top 100%",
+                    end: "+=1000",
                     scrub: 1
-                },
-                y:-450,}).addLabel("myLabel2");
+                }
+            });
+
+            tl.to(".imgAnimation",{y:-600, duration: 50})
            
             gsap.to("#back",{
                 scrollTrigger : {
