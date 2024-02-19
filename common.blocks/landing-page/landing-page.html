@@ -67,9 +67,9 @@
                                 </button>                  
                             </div>
                         </section>        
-                    <section class="container imgAnimation2 bg-black flex mx-0 justify-center items-center max-w-full xl:mt-[50rem] my-28 xl:my-0 xl:h-screen h-max relative hello">
+                    <section class="container bg-black flex mx-0 justify-center items-center max-w-full xl:mt-[50rem] my-28 xl:my-0 xl:h-screen h-max relative hello">
                         <div class="flex xl:flex-row flex-col mx-auto justify-between items-center xl:basis-9/12 basis-11/12">
-                            <div class="flex relative flex-col mx-0 w-fit basis-[42%] xl:p-5">
+                            <div class="flex relative flex-col mx-0 w-fit basis-[42%] xl:p-5 imgAnimation_1">
                                 <span class="xl:text-[240px] text-9xl absolute text-white font-bold opacity-20 xl:-left-32 xl:-top-40 -left-12 -top-11" style="user-select: none; z-index: 1!important;">
                                     01
                                 </span>
@@ -100,7 +100,7 @@
                     </section>
             <section class="container bg-black flex max-w-full z-1 justify-center items-center xl:mt-48 my-28 xl:my-0 xl:h-screen relative h-max">
                 <div class="flex xl:flex-row flex-col mx-auto justify-between items-center xl:basis-10/12 basis-11/12">
-                    <div class="flex relative flex-col xl:order-last mx-0 w-fit basis-[42%] xl:p-5">
+                    <div class="flex relative flex-col xl:order-last mx-0 w-fit basis-[42%] xl:p-5 imgAnimation_2">
                         <span class="xl:text-[240px] text-9xl absolute text-white font-bold opacity-20  xl:-left-32 xl:-top-40 -left-12 -top-11" style="user-select: none; z-index: -10!important;">
                             02
                         </span> 
@@ -124,13 +124,13 @@
                             </button>
                         </div>
                         <div>
-                            <img class="h-full w-full" src="/images/02.png" alt="">
+                            <img class="h-full w-full imgAnimation2" src="/images/02.png" alt="">
                         </div>
                     </div>
                 </section>
         <section class="container bg-black flex max-w-full z-1 justify-center items-center xl:mt-48 my-28 xl:my-0 xl:h-screen relative h-max">
             <div class="flex xl:flex-row flex-col mx-auto justify-between items-center xl:basis-10/12 basis-11/12">
-                <div class="flex relative flex-col mx-0 w-fit basis-[42%] xl:p-5">
+                <div class="flex relative flex-col mx-0 w-fit basis-[42%] xl:p-5 imgAnimation_3">
                     <span class="xl:text-[240px] text-9xl absolute text-white font-bold opacity-20  xl:-left-32 xl:-top-40 -left-12 -top-11" style="user-select: none; z-index: -10!important;">
                         03
                     </span> 
@@ -155,7 +155,7 @@
                         </button>
                     </div>
                     <div>
-                        <img class="h-full w-full" src="/images/03.png" alt="">
+                        <img class="h-full w-full imgAnimation3" src="/images/03.png" alt="">
                     </div>
                 </div>
             </section> 
@@ -231,7 +231,19 @@
         <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
         <script>
             
-            const tl = gsap.timeline({
+            const tl1 = gsap.timeline({
+                scrollTrigger : {
+                    trigger: ".imgAnimation",
+                    markers: true,
+                    start:"top 100%",
+                    end: "+=1000",
+                    scrub: 0.5
+                }
+            });
+
+            tl1.to(".imgAnimation",{y:-500, duration: 50});
+
+            const tl_1 = gsap.timeline({
                 scrollTrigger : {
                     trigger: ".imgAnimation",
                     markers: true,
@@ -240,8 +252,56 @@
                     scrub: 1
                 }
             });
+            tl_1.to(".imgAnimation_1",{y:300});
+            tl_1.to(".imgAnimation_1",{y:-700, duration: 40});
 
-            tl.to(".imgAnimation",{y:-600, duration: 50})
+            const tl2 = gsap.timeline({
+                scrollTrigger : {
+                    trigger: ".imgAnimation2",
+                    markers: true,
+                    start:"top 100%",
+                    end: "+=1000",
+                    scrub: 0.5
+                }
+            });
+
+            tl2.to(".imgAnimation2",{y:-500, duration: 50});
+
+            const tl_2 = gsap.timeline({
+                scrollTrigger : {
+                    trigger: ".imgAnimation2",
+                    markers: true,
+                    start:"top 100%",
+                    end: "+=1000",
+                    scrub: 1
+                }
+            });
+            tl_2.to(".imgAnimation_2",{y:300});
+            tl_2.to(".imgAnimation_2",{y:-700, duration: 40});
+
+            const tl3 = gsap.timeline({
+                scrollTrigger : {
+                    trigger: ".imgAnimation3",
+                    markers: true,
+                    start:"top 100%",
+                    end: "+=1000",
+                    scrub: 0.5
+                }
+            });
+
+            tl3.to(".imgAnimation3",{y:-500, duration: 50});
+
+            const tl_3 = gsap.timeline({
+                scrollTrigger : {
+                    trigger: ".imgAnimation3",
+                    markers: true,
+                    start:"top 100%",
+                    end: "+=1000",
+                    scrub: 1
+                }
+            });
+            tl_3.to(".imgAnimation_3",{y:300});
+            tl_3.to(".imgAnimation_3",{y:-700, duration: 40});
            
             gsap.to("#back",{
                 scrollTrigger : {
