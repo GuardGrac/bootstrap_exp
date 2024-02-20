@@ -86,7 +86,7 @@
                             <span class="text-balance xl:text-base text-lg text-white">
                                 Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? 
                             </span> 
-                            <button class="flex items-center text-xs text-yellow-300 w-fit">
+                            <button class="flex items-center text-xs text-yellow-300 w-fit sec_2">
                                 read more
                                 <svg class="m-2 -rotate-90" width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path class="fill-yellow-300" d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
@@ -116,7 +116,7 @@
                             </h1>
                             <span class="text-balance text-white">
                                 The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have. Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</span> 
-                            <button class="flex items-center text-xs text-yellow-300 w-fit">
+                            <button class="flex items-center text-xs text-yellow-300 w-fit sec_3">
                                 read more
                                 <svg class="m-2 -rotate-90" width="16" height="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path class="fill-yellow-300" d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
@@ -228,143 +228,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>       
         <script src="/common.blocks/burger/burger.js"></script>
-        <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script> 
-        <script>
-            
-            const tl1 = gsap.timeline({
-                scrollTrigger : {
-                    trigger: ".imgAnimation",
-                    markers: true,
-                    start:"top 100%",
-                    end: "+=1000",
-                    scrub: 0.5
-                }
-            });
-
-            tl1.to(".imgAnimation",{y:-500, duration: 50});
-
-            const tl_1 = gsap.timeline({
-                scrollTrigger : {
-                    trigger: ".imgAnimation",
-                    markers: true,
-                    start:"top 100%",
-                    end: "+=1000",
-                    scrub: 1
-                }
-            });
-            tl_1.to(".imgAnimation_1",{y:300});
-            tl_1.to(".imgAnimation_1",{y:-700, duration: 40});
-
-            const tl2 = gsap.timeline({
-                scrollTrigger : {
-                    trigger: ".imgAnimation2",
-                    markers: true,
-                    start:"top 100%",
-                    end: "+=1000",
-                    scrub: 0.5
-                }
-            });
-
-            tl2.to(".imgAnimation2",{y:-500, duration: 50});
-
-            const tl_2 = gsap.timeline({
-                scrollTrigger : {
-                    trigger: ".imgAnimation2",
-                    markers: true,
-                    start:"top 100%",
-                    end: "+=1000",
-                    scrub: 1
-                }
-            });
-            tl_2.to(".imgAnimation_2",{y:300});
-            tl_2.to(".imgAnimation_2",{y:-700, duration: 40});
-
-            const tl3 = gsap.timeline({
-                scrollTrigger : {
-                    trigger: ".imgAnimation3",
-                    markers: true,
-                    start:"top 100%",
-                    end: "+=1000",
-                    scrub: 0.5
-                }
-            });
-
-            tl3.to(".imgAnimation3",{y:-500, duration: 50});
-
-            const tl_3 = gsap.timeline({
-                scrollTrigger : {
-                    trigger: ".imgAnimation3",
-                    markers: true,
-                    start:"top 100%",
-                    end: "+=1000",
-                    scrub: 1
-                }
-            });
-            tl_3.to(".imgAnimation_3",{y:300});
-            tl_3.to(".imgAnimation_3",{y:-700, duration: 40});
-           
-            gsap.to("#back",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                scale: 1.5,
-                y:500,
-            });
-
-            gsap.to("#middle",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                scale: 1.8,
-                y:800,
-            });
-
-            gsap.to("#front",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                scale: 0.7,
-                y:400,
-            });
-
-            gsap.to("#text-sec",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                y:-300,
-            });
-
-            gsap.to("#text-sec2",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                y:-450,
-            });
-
-            gsap.to("#text-sec3",{
-                scrollTrigger : {
-                    scrub: 1
-                },
-                y:-300,
-            });
-        </script>
-        <script>
-            const lenis = new Lenis({
-                lerp: 0.09,
-                wheelMultiplier: 0.7
-            })
-
-            lenis.on('scroll', (e) => {
-            console.log(e)  
-            })
-
-            lenis.on('scroll', ScrollTrigger.update)
-
-            gsap.ticker.add((time)=>{
-            lenis.raf(time * 1000)
-            })
-
-            gsap.ticker.lagSmoothing(0)
-        </script>
+        <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+        <script src="/common.blocks/js/anim.js"></script>
+        <script src="/common.blocks/js/lenis.js"></script> 
     </body>
 </html>

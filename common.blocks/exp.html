@@ -8,11 +8,11 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="overflow-x-hidden"> 
 
     <div class="space h-screen w-screen bg-lime-600"></div>
             
-        <div class="flex">
+        <!-- <div class="flex">
             <div class="box w-[200px] h-[200px] bg-black">
 
             </div>
@@ -27,12 +27,31 @@
 
             </div>
 
-        </div>
-        <!-- <div class="back w-screen h-[50vh]">
-            <div class="box2 w-[200px] h-[200px] bg-yellow-600">
+        </div>  -->
+        <div class="back w-screen absolute align-center h-[50vh]">
+
+            <div class="flex justify-center">
+               <span class="text text1 pt-5 -right-64 top-64">
+                ABLALALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            </span>
+            <span class="text text2 -left-20 bottom-20">
+                ABLALALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            </span>
+            <!-- <span class="text text3 bottom-20 right-20">
+              ABLALALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+            </span> -->
+            <!-- 
+            <span class="text text4 top-16 -left-20 rotate-[-15deg]">
+                ABLALALALAL ABLALALALAL ABLALALALAL
+            </span>
+            <span class="text text5 -right-20 top-64 rotate-[-25deg]">
+                ABLALALALALLlllllllll
+            </span>   -->
+            </div>
+           
+           
 
         </div>
-        </div> -->
 
         
    
@@ -49,32 +68,84 @@
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
 
     <script>
-        function show(batch) {
-                gsap.set(batch, {opacity: 0, x: 550});
-                
-                batch.forEach((item, i) => {
-                    // Do whatever you want with each item in the batch
-                    gsap.timeline().to(item, {opacity: 1, x: 0, overwrite: true, duration: 0.75, delay: i * 0.15});
-                })
-        }
 
-        ScrollTrigger.batch(".box", {
-            interval: 0.1,
-            batchMax: 3, 
-            markers: true,
-            onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-            onLeave: batch => gsap.set(batch, { opacity: 0, y: -300, overwrite: true }),
-            onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-            onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 300, overwrite: true }),
-            start: "top 100%",
-            end: "bottom 50%"
+        gsap.set(".text1",{x:-1800, duration: 0})
+            const tl1 = gsap.timeline({
+            scrollTrigger : {
+                trigger: ".text",
+                markers: true,
+                start:"top 100%",
+                end: "",
+                scrub: 0.5
+            }
         });
+        tl1.to(".text1",{x:500, duration: 30});
+
+        gsap.set(".text2",{rotate: 15, duration: 0});
+        gsap.set(".text2",{x:-1400, duration: 0});
+        gsap.set(".text2",{y:-200, duration: 0});
+        gsap.set("text2", {
+        xPercent: -50,
+        yPercent: -50
+        });
+
+        const tl2 = gsap.timeline({
+            scrollTrigger : {
+                trigger: ".text2",
+                markers: true,
+                start:"top 100%",
+                end: "",
+                scrub: 0.5
+            }
+        });
+        tl2.to(".text2",{x:800, duration: 30});
+
+        // gsap.set(".text3",{rotate: -25, duration: 0});
+        // gsap.set(".text3",{x:-1400, duration: 0});
+        // gsap.set(".text3",{y:300, duration: 0});
+
+        // const tl3 = gsap.timeline({
+        //     scrollTrigger : {
+        //         trigger: ".text3",
+        //         markers: true,
+        //         start:"top 100%",
+        //         end: "",
+        //         scrub: 0.5
+        //     }
+        // });
+        // tl3.to(".text3",{x:1800,y:-400, duration: 30});
+
+
+
+        
+
+        // tl2.to(".text2",{x:500,y:500, duration: 30});
+
+        // function show(batch) {
+        //         gsap.set(batch, {opacity: 0, x: 550});
+                
+        //         batch.forEach((item, i) => {
+        //             // Do whatever you want with each item in the batch
+        //             gsap.timeline().to(item, {opacity: 1, x: 0, overwrite: true, duration: 0.75, delay: i * 0.15});
+        //         })
+        // }
+
+        // ScrollTrigger.batch(".box", {
+        //     interval: 0.1,
+        //     batchMax: 3, 
+        //     markers: true,
+        //     onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+        //     onLeave: batch => gsap.set(batch, { opacity: 0, y: -300, overwrite: true }),
+        //     onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
+        //     onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 300, overwrite: true }),
+        //     start: "top 100%",
+        //     end: "bottom 50%"
+        // });
 
     //     gsap.to('.box2', {
     //   opacity: 1,
     //   ease: 'none',
     //   scrollTrigger: {
-    //     trigger: '',
     //     markers: true,
     //     start: 'top top',
     //     end: '+=200',
@@ -87,9 +158,9 @@
     //   ease: 'none',
     //   immediateRender: false,
     //   scrollTrigger: {
-    //     trigger: '.back',
+    //     trigger: '.box2',
     //     markers: true,
-    //     start: 'top 50%',
+    //     start: 'top 20%',
     //     end: 'bottom top',
     //     scrub: true
     //   }
