@@ -10,7 +10,9 @@
 
 <body class="overflow-x-hidden"> 
 
-    <div class="space h-screen w-screen bg-lime-600"></div>
+    <div class="bg-yellow-600 h-screen" ></div>
+
+    
             
         <!-- <div class="flex">
             <div class="box w-[200px] h-[200px] bg-black">
@@ -28,15 +30,56 @@
             </div>
 
         </div>  -->
-        <div class="back w-screen absolute align-center h-[50vh]">
+        <div class="back flex justify-center w-screen align-center h-[60vh]" data-scroll-container>
 
-            <div class="flex justify-center">
-               <span class="text text1 pt-5 -right-64 top-64">
-                ABLALALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            </span>
-            <span class="text text2 -left-20 bottom-20">
-                ABLALALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-            </span>
+              
+                        <!-- <div id="direction" data-scroll-section class="text1 absolute h-[150px] w-[2500px]">
+                            <span class="text pt-5" data-scroll data-scroll data-scroll-direction="horizontal" data-scroll-target="#direction" data-scroll-speed="2" data-scroll-repeat="true">
+                                ABLALALALALAAAAAAAAAAAA
+                            </span>
+                        </div>
+                        
+                        <div id="direction" data-scroll data-scroll-section class="text2 absolute h-[150px] w-[2500px]">
+                            <span class="text pt-5" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.5" data-scroll-target="#direction" data-scroll-repeat="true">
+                            ABLALALALALAAAAAAAAAAAAAAA
+                            </span>
+                        </div> -->
+                                <svg class="absolute" id="svg" viewBox="0 0 1920 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="path-buba" id="text-path" d="M0 1H1920" stroke="black" fill="none"/>
+                                        <text class="text-anim" font-size="32">
+                                            <textPath href="#text-path" startOffset="0">
+                                                ABLALALALALAAAAAAAAAAAA
+                                            </textPath>
+                                        </text>
+                                    </svg>
+
+                                <svg viewBox="0 0 1922 284" id="svg2" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="path-buba2" id="text-path2" d="M1 1L1921 283" stroke="black" fill="none"/>
+                                        <text class="text-anim2 rotate-[9deg]" font-size="32">
+                                            <textPath href="#text-path" startOffset="0">
+                                                ABLALALALALAAAAAAAAAAAA
+                                            </textPath>
+                                        </text>
+                                </svg>
+                                        
+                                        
+                                    
+                        <!-- <div class="text1 absolute h-[150px] w-[2500px]">
+                            <span class="text pt-5">
+                                ABLALALALALAAAAAAAAAAAA
+                            </span>
+                        </div>
+                        
+                        <div class="text2 absolute h-[150px] w-[2500px]">
+                            <span class="text pt-5">
+                            ABLALALALALAAAAAAAAAAAAAAA
+                            </span>
+                        </div> -->
+               
+
+                
+
+               
             <!-- <span class="text text3 bottom-20 right-20">
               ABLALALALALAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
             </span> -->
@@ -47,58 +90,102 @@
             <span class="text text5 -right-20 top-64 rotate-[-25deg]">
                 ABLALALALALLlllllllll
             </span>   -->
-            </div>
+            
+            
+           
            
            
 
         </div>
+        <div class="bg-yellow-600 h-screen" ></div>
 
         
    
-
-    <div class="space h-screen w-screen bg-lime-600"></div>
-
 
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="/common.blocks/burger/burger.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <!-- <script>
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[#direction]'),
+            smooth: true,
+            direction: "horizontal",
+            repeat: true
+        });
+    </script> -->
 
     <script>
+        gsap.defaults({ease: "none"});
 
-        gsap.set(".text1",{x:-1800, duration: 0})
-            const tl1 = gsap.timeline({
-            scrollTrigger : {
-                trigger: ".text",
+        const main = gsap.timeline({
+            scrollTrigger:{
+                trigger: "#svg",
+                scrub: 0.3,
                 markers: true,
-                start:"top 100%",
-                end: "",
-                scrub: 0.5
+                start: "top center",
+                end: "+=400"
             }
-        });
-        tl1.to(".text1",{x:500, duration: 30});
+        })
+        .to(".text-anim",{motionPath:{
+            path: ".path-buba",
+            align: ".path-buba",
+            alignOrigin:[0.5, 0.5],
+         }, duration:4}, 0)
 
-        gsap.set(".text2",{rotate: 15, duration: 0});
-        gsap.set(".text2",{x:-1400, duration: 0});
-        gsap.set(".text2",{y:-200, duration: 0});
-        gsap.set("text2", {
-        xPercent: -50,
-        yPercent: -50
-        });
-
-        const tl2 = gsap.timeline({
-            scrollTrigger : {
-                trigger: ".text2",
+         const main2 = gsap.timeline({
+            scrollTrigger:{
+                trigger: "#svg2",
+                scrub: 0.8,
                 markers: true,
-                start:"top 100%",
-                end: "",
-                scrub: 0.5
+                start: "top center",
+                end: "+=400"
             }
-        });
-        tl2.to(".text2",{x:800, duration: 30});
+        })
+        .to(".text-anim2",{motionPath:{
+            path: ".path-buba2",
+            align: ".path-buba2",
+            alignOrigin:[0.5, 0.5],
+         }, duration:4}, 0)
+        //  gsap.set(".text1",{x:-1800, duration: 0});
+        //     const tl1 = gsap.timeline({
+        //         xPercent: -50,
+        //         yPercent: -50,
+        //     scrollTrigger : {
+        //         pin: ".back",
+        //         start: "top 50%",
+        //         markers: true,
+        //         top: "50%",
+        //         end: "+=1000",
+        //         scrub: 0.5
+        //     }
+        // });
+        // tl1.to(".text1",{x:1500, duration: 10});
+        // // gsap.set(".text2", {
+        // // xPercent: -50,
+        // // yPercent: -50
+        // // });
+        // gsap.set(".text2",{rotate: 20, duration: 0});
+        // gsap.set(".text2",{x:-600, duration: 0});
+        // gsap.set(".text2",{y:-600, duration: 0});
+        //   const tl2 = gsap.timeline({
+        //         xPercent: -50,
+        //         yPercent: -50,
+        //     scrollTrigger : {
+        //         trigger: ".back",
+        //         // pin: "._center",
+        //         start: "top 50%",
+        //         markers: true,
+        //         top: "50%",
+        //         end: "+=1000",
+        //         scrub: 0.5
+        //     },
+        // });
+       
+        // tl2.from(".text2",{x:650,y:0, duration: 10});
 
         // gsap.set(".text3",{rotate: -25, duration: 0});
         // gsap.set(".text3",{x:-1400, duration: 0});
@@ -196,7 +283,7 @@
         })
 
         gsap.ticker.lagSmoothing(0)
-    </script>
+    </script> 
 </body>
 
 </html>
